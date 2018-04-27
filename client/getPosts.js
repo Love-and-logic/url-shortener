@@ -1,9 +1,10 @@
-//1. define functions:
+//1. define functions: aka ask for the blog entries
+
 const getPosts = () => {
     container.innerHTML = ''
-    fetch('http://localhost:3000/posts/').then(response =>{
+    fetch('http://localhost:3000/posts/').then(response =>{ //2. waiting for all blog entries to be returned from server
         return response.json();
-      }).then(showPosts)
+      }).then(showPosts) // do something with that data
 }
 
 const showPosts = (posts) => {
