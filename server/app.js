@@ -26,10 +26,8 @@ function makeid() {
 
 console.log(makeid());
 
-
-Math.random().toString(36).substring(7);
-
-
+var crypto = require("crypto");
+var id = crypto.randomBytes(20).toString('hex');
 
 let app = express()
 
