@@ -1,16 +1,13 @@
-# hw12-final-project-phase-1
+Hello All!
 
-<<<<<<< HEAD
-This application takes long URLs and shortens them. It was built from scratch with Javascript.
+Welcome to our URL shortener page. We have created a client folder where you can access the index.html and the other css and javascript assets located in the assets folder:
 
+client
+  /assets
+  index.html
+    /js
+    /css
 
-Team members included EJ, Ehidin
-
-But Morgan was definitely the best.
-=======
-This application takes long URLs and shorten them. It was built from scratch with Javascript.
-
-Team members included X, Y, Z
-
-But Ehidin was definitely the best.
->>>>>>> 70447f5d1f12383dc9adbaab36eb1561fcfd78e1
+ server
+  /routes
+  app.js
