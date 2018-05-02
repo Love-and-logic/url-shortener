@@ -8,26 +8,25 @@ const routes = require('./routes')
 let store = {
     posts: [{
         url: 'https://courses.edx.org/courses/course-v1:Microsoft+DEV283x+2T2017/course/',
-        text: 'As we have already discussed, this course is a little advanced and some of the language and concepts are glossed over because the teacher already assumes basic fluency with server-side programming. That is OK. You will still learn a ton, even if you don\'t understand everything. You are learning to use developer documentation and resources, and we will go over the jargon and concepts in class.',
+        text: 'ss.',
         }]
     }]
 }
 
-
+// eamples of random character generators
+/*
 function makeid() {
   var text = "";
   var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
   for (var i = 0; i < 5; i++)
     text += possible.charAt(Math.floor(Math.random() * possible.length));
-
   return text;
 }
-
 console.log(makeid());
 
 var crypto = require("crypto");
 var id = crypto.randomBytes(20).toString('hex');
+*/
 
 let app = express()
 
@@ -41,15 +40,16 @@ app.use((req, res, next) => {
     req.store = store
     next()
 })
-
+app.get('/', routes.sayHey)
+app.post('/response', routes.postForm)
+/*
 app.get('/posts', routes.posts.getPosts)
 app.get('/posts/:postId', routes.posts.getPost)
 app.post('/posts', routes.posts.addPost)
 app.put('/posts/:postId', routes.posts.updatePost)
 app.delete('/posts/:postId', routes.posts.removePost)
 
-/*
-// NOTE: We will worry about comments next week:
+//
 app.get('/posts/:postId/comments', routes.comments.getComments)
 app.post('/posts/:postId/comments', routes.comments.addComment)
 app.put('/posts/:postId/comments/:commentId', routes.comments.updateComment)
