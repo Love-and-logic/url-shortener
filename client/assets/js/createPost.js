@@ -1,9 +1,9 @@
-const createPost = () => {
+const genURL = () => {
 	const data = {
-	original: document.querySelector('#orig').value
-	text: document.querySelector('#text').value
+	longURL: document.getElementById('longURL').value
+	shortURL: document.getElementById('shortURL').value
 	}
-
+	console.log(genURL)
 
 console.log('Saving the following object to the server:', data);
 

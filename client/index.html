@@ -2,22 +2,45 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>MMART162 - Homework12 - Part I. Final Project Phase I</title>
+        <title>MMART162 - Contemporary Scripting</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="css/main.css" rel="stylesheet" />
     </head>
     <body>
-        <header>
-          Part I. Final Project Phase I
-        </header>
 
-        </div>
+        <section class="hero is-medium is-primary is-bold">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title">
+                MMART162 Final Project- Custom URL Shortener 
+              </h1>
+                <h2 class="subtitle">
+                  Group: Morgan, Ehidin, and Ej
+                </h2>
+                <label>Long URL:</label>
+                    <input class="input" type="text" id="longURL" placeholder="Long URL: e.g. https://www.berkeleycitycollege.edu/somethingreallylong">
+                    <a class="button is-warning is-focused">Submit</a>
+                <BR><BR>
+                  <label>Short URL:</label>
+                    <input class="input" type="text" id="shortURL" placeholder="Short URL: e.g. https://www.berkeleycitycollege.edu/ABC123">
+                    <a class="button is-warning is-focused">Submit</a>
+              </div>
+            </div>
+        </section>
 
-        <form action="#" id="longURL" method='get'>
+        <footer>
           <div>
-          <label for="">Long URL: <input type="text" name="longURL" placeholder="E.g. https://www.berkeleycitycollege.edu"><br>
-        <input type="submit" name="longurl" value="Submit">
-        </label>
+            <div class="level-item has-text-centered">
+              <p class="buttons">
+                <a class="button is-medium" href="https://github.com/love-and-logic/urlshorty">
+                <span class="icon">
+                <i class="fa fa-github"></i>
+              </span>
+            </a>
+          </div>
+          </div>
+        </footer>
 
         <script src="assets/js/createPost.js"></script>
         <script src="assets/js/getPosts.js"></script>
