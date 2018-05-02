@@ -5,14 +5,16 @@ Welcome to our URL shortener page.
 The client directory has the index.html and an assets folder with the css and javascript.
 The server folder contains the app.js which is the mechanics of the url shortener.
 
-The user-entered URLs are stored in: (?)
+The user-entered URLs are stored in: index.js
 
 File structure:
-index.html  
-client                                                                                         
-/assets                                                                                             
-/js                                                                                                                                                                                      
-/css                                                                                                                                                                                         
+
+client                                                                                     
+     index.html                                                                        
+     /assets                                                                                             
+          /js                                                                                                               
+          /css                                                                                                                 
 server                                                                                           
-/routes                                                                                           
-app.js
+      /routes                                                                                           
+          index.js                                                                             
+      app.js
