@@ -10,11 +10,11 @@ The user-entered URLs are stored in: index.js
 File structure:
 
 client                                                                                     
-     index.html                                                                        
-     /assets                                                                                             
-          /js                                                                                                               
-          /css                                                                                                                 
+.....index.html                                                                        
+...../assets                                                                                             
+........../js                                                                                                             
+........../css                                                                                                                 
 server                                                                                           
-      /routes                                                                                           
-          index.js                                                                             
-      app.js
+...../routes                                                                                           
+..........index.js                                                                             
+.....app.js
