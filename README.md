@@ -7,7 +7,9 @@ The server folder contains the app.js which is the mechanics of the url shortene
 
 The user-entered URLs are stored in: (?)
 
-client                                                                                           index.html                                                                                           
+File structure:
+index.html  
+client                                                                                         
 /assets                                                                                             
 /js                                                                                                                                                                                      
 /css                                                                                                                                                                                         
