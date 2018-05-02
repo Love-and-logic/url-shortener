@@ -13,21 +13,6 @@ let store = {
     }]
 }
 
-// eamples of random character generators
-/*
-function makeid() {
-  var text = "";
-  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  for (var i = 0; i < 5; i++)
-    text += possible.charAt(Math.floor(Math.random() * possible.length));
-  return text;
-}
-console.log(makeid());
-
-var crypto = require("crypto");
-var id = crypto.randomBytes(20).toString('hex');
-*/
-
 let app = express()
 
 // Middleware: Does stuff to the request and response objects
