@@ -19,7 +19,7 @@ fetch('http://localhost:3000/posts/', {
 
 }
 
-document.querySelector('.button-primary').onclick = createPost
+// document.querySelector('.button-primary').onclick = createPost
 
 //ORIGINAL FROM WEEK 7
 
