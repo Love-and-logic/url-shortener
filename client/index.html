@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>MMART162 - Homework12 - Part I. Final Project Phase I</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+        <link rel="stylesheet" href="assets/css/main.css" type="text/css" >
         <link href="css/main.css" rel="stylesheet" />
     </head>
     <body>
@@ -12,17 +12,24 @@
         </header>
 
         </div>
-
+<!--
         <form action="#" id="longURL" method='get'>
           <div>
           <label for="">Long URL: <input type="text" name="longURL" placeholder="E.g. https://www.berkeleycitycollege.edu"><br>
         <input type="submit" name="longurl" value="Submit">
         </label>
+--!>
+        <!--   results area  -->
+         <p id="results"></p>
 
-        <script src="assets/js/createPost.js"></script>
-        <script src="assets/js/getPosts.js"></script>
-        <script src="assets/js/modal.js"></script>
-        <script src="../server/app.js"></script>
 
-    </body>
-</html>
+
+
+     <!--  their code -->
+           <label>Long URL</label>
+           <input id="original">
+            <input id="code">
+           <button id="button">Shorten URL</button>
+           <script type="text/javascript" src="../assets/js/sendUrl.js"> </script>
+         </body>
+     </html>
