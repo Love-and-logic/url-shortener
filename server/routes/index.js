@@ -1,5 +1,7 @@
 //array of objects to be stored
 const database = []
+const mongoose = require('mongoose')
+const models = require('../models')
 
 /*
 const makeid = () => {
@@ -56,6 +58,7 @@ module.exports = {
   module.exports = {
           postForm(req, res) {
           console.log(req.body)
+          //TODO: Use Mongoose to insert to your database
           database.push(req.body)
 
           res.status(200).send({
