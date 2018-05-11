@@ -9,6 +9,7 @@
   "author": "Ej Cruz via tutorial of coligo.io",
   "license": "MIT",
   "dependencies": {
+    "cors": "2.8.4",
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
     "mongoose": "^5.0.18"

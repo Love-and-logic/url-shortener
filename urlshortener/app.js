@@ -31,6 +31,7 @@
 //   console.log('Server listening on port 3000');
 // });
 var express = require('express');
+const cors = require('cors')
 var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
@@ -46,7 +47,7 @@ mongoose.connect('mongodb://' + config.db.host + '/' + config.db.name, {autoInde
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(cors())
 // tell Express to serve file from our public folder
 app.use(express.static(path.join(__dirname, 'client')));
 
@@ -63,9 +64,11 @@ app.get('/', function(req, res){
 app.post('/api/shorten', function(req, res){
   var longUrl = req.body.url;
   var shortUrl = '';
+  res.status(200).send(req.body)
+
 
   // check if url already exists in database
-  Url.findOne({long_url: longUrl}, function (err, doc){
+  /*Url.findOne({long_url: longUrl}, function (err, doc){
     if (doc){
       // base58 encode the unique _id of that document and construct the short URL
       shortUrl = config.webhost + shorteningAlgo.encode(doc._id);
@@ -90,9 +93,9 @@ app.post('/api/shorten', function(req, res){
 
         res.send({'shortUrl': shortUrl});
       });
-    }
+  }
 
-  });
+  });*/
 
 });
 
