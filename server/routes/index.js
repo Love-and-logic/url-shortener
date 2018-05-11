@@ -1,8 +1,8 @@
 //array of objects to be stored
 const database = []
 
-
-const makeid() = () => {
+/*
+const makeid = () => {
   let text = ''
   const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   for (let i = 0; i < 5; i++)
@@ -14,9 +14,6 @@ console.log(makeid())
 
 module.exports = {
 
-  sayHey(req,res){
-  res.status(200).send({message : 'Hey}')}
-
   postForm(req,res) {
     //store it and send it
     database.push(req.body)
@@ -27,7 +24,7 @@ module.exports = {
       //then, store it
       database.push(req.body)
       res.status(200).send({
-        message = makeid(),
+        message : makeid(),
         database: database
       })
       //if the code is less than 6 characters, send 500 'error'
@@ -47,12 +44,26 @@ module.exports = {
     }
 
     res.status(200).send({
-        message : req.body.code
+        message : req.body.code,
         message : 'Here is your long URL: ${req.body.longUrl}. Here is your short URL: ${req.body.code}'
-      )}
+      })
   }
   /*
   posts: require('./posts.js'),
   comments: require('./comments.js')
   */
-}
+
+  module.exports = {
+          postForm(req, res) {
+          console.log(req.body)
+          database.push(req.body)
+
+          res.status(200).send({
+            message : `Here is your code: ${req.body.code}`,
+            //Define ask sarah
+            database: database
+          })
+          console.log(database)
+      }
+
+  }
