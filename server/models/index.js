@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 //Define a schema
 const UrlSchema = new mongoose.Schema({
-    code: String,
+    shortUrl: String,
     url: String
 })
 

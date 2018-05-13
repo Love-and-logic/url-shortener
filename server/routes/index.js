@@ -3,14 +3,35 @@ const database = []
 const mongoose = require('mongoose')
 const models = require('../models')
 
-/*
-const makeid = () => {
-  let text = ''
-  const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  for (let i = 0; i < 5; i++)
-    text += possible.charAt(Math.floor(Math.random() * possible.length));
-  return text;
+const Url = mongoose.model('Url', models.Url)
+
+module.exports = {
+  saveUrl(req, res){
+      var longUrl = req.body.url;
+      var shortUrl = req.body.shortUrl;
+
+      const makeid = () => {
+        let text = ''
+        const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        for (let i = 0; i < 7; i++)
+          text += possible.charAt(Math.floor(Math.random() * possible.length));
+        return text;
+      }
+      if (req.body.shortUrl.length === 0) {
+       //first, generate the code
+        req.body.shortUrl = makeid()
+      }
+      const url = new Url(req.body)
+      url.save(function (err, model) {
+          if (err) {
+              return console.error(err)
+          }
+          console.log(model, 'saved!!!')
+          res.status(201).send(model)
+      })
+  }
 }
+/*
 
 console.log(makeid())
 
@@ -54,19 +75,3 @@ module.exports = {
   posts: require('./posts.js'),
   comments: require('./comments.js')
   */
-
-  module.exports = {
-          postForm(req, res) {
-          console.log(req.body)
-          //TODO: Use Mongoose to insert to your database
-          database.push(req.body)
-
-          res.status(200).send({
-            message : `Here is your code: ${req.body.code}`,
-            //Define ask sarah
-            database: database
-          })
-          console.log(database)
-      }
-
-  }
