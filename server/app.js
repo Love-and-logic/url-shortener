@@ -25,42 +25,9 @@ app.use(logger('dev'))
 app.use(errorhandler())
 app.use(cors())
 
-app.post('/response', routes.postForm)
 
-app.post('/api/shorten', function(req, res){
-    var longUrl = req.body.url;
-    var shortUrl = '';
-    res.status(200).send(req.body)
-    // check if url already exists in database
-    /*Url.findOne({long_url: longUrl}, function (err, doc){
-      if (doc){
-        // base58 encode the unique _id of that document and construct the short URL
-        shortUrl = config.webhost + shorteningAlgo.encode(doc._id);
+app.post('/api/shorten', routes.saveUrl)
 
-        // since the document exists, we return it without creating a new entry
-        res.send({'shortUrl': shortUrl});
-      } else {
-        // The long URL was not found in the long_url field in our urls
-        // collection, so we need to create a new entry:
-        var newUrl = Url({
-          long_url: longUrl
-        });
-
-        // save the new link
-        newUrl.save(function(err) {
-          if (err){
-            console.log(err);
-          }
-
-          // construct the short URL
-          shortUrl = config.webhost + shorteningAlgo.encode(newUrl._id);
-
-          res.send({'shortUrl': shortUrl});
-        });
-    }
-
-    });*/
-})
 
 
 app.listen(3000)
