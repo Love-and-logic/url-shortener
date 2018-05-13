@@ -1,7 +1,20 @@
-# hw12-final-project-phase-1
+Hello All!
 
-This application takes long URLs and shortens them. It was built from scratch with Javascript.
+Welcome to our URL shortener page.
 
-Team members included Colin, Ehidin, Ej, and Morgan.
+The client directory has the index.html and an assets folder with the css and javascript.
+The server folder contains the app.js which is the mechanics of the url shortener.
 
-But Everyone, maybe Ricky was definitely the best
+The user-entered URLs are stored in: index.js
+
+File structure:
+
+client                                                                                     
+.....index.html                                                                        
+...../assets                                                                                             
+........../js                                                                                                             
+........../css                                                                                                                 
+server                                                                                           
+...../routes                                                                                           
+..........index.js                                                                             
+.....app.js
