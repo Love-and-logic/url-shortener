@@ -12,8 +12,8 @@ const saveURL = () => {
         return response.json();
     }).then(function(data) {
         console.log(data)
-        var resultHTML = '<a class="result" href="' + data.shortUrl + '">'
-            + data.shortUrl + '</a>';
+        var resultHTML = '<a class="result" href="' + data.shortenUrl + '">'
+            + data.shortenUrl + '</a>';
         $('#link').html(resultHTML);
         $('#link').hide().fadeIn('slow');
     })

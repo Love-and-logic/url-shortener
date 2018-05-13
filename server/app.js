@@ -27,6 +27,8 @@ app.use(cors())
 
 
 app.post('/api/shorten', routes.saveUrl)
+app.get('/:code', routes.redirectFromCode)
+
 
 
 app.listen(3000)
