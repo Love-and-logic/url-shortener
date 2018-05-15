@@ -29,8 +29,8 @@ For QA testing, run locally on a NoSQL database server.
 ### Prerequisites
 
 Documentation for the following programs are available on their respective websites
-Install [MongoDB](https://www.mongodb.com/)
-Install [NodeJS] (https://nodejs.org/en/)
+* Install [MongoDB](https://www.mongodb.com/)
+* Install [NodeJS] (https://nodejs.org/en/)
 
 
 ### Installing
@@ -75,9 +75,9 @@ We use [SemVer](http://semver.org/) for versioning.
 
 ## Authors
 
-* **Ehidhin Borbon** [Ehidin Borbon](https://github.com/eabg)
-* **Ej Cruz** [Ej Cruz](https://github.com/love-and-logic)
-* **Morgan Rain** [Morgan Rain](https://github.com/rainbyrd)
+* **Ehidhin Borbon** [Github](https://github.com/eabg)
+* **Ej Cruz** [Github](https://github.com/love-and-logic)
+* **Morgan Rain** [Github](https://github.com/rainbyrd)
 
 See also the list of [contributors](https://github.com/Love-and-logic/urlshorty/graphs/contributors) who participated in this project.
 
