@@ -4,15 +4,16 @@ const saveURL = () => {
     fetch('http://localhost:3000/api/shorten', {
         method: 'POST',
         body: JSON.stringify({
-            url: $('#url-field').val()
+            url: $('#url-field').val(),
+            shortUrl: $('#short-field').val()
         }),
         headers: {"Content-Type": "application/json"}
     }).then(function(response){
         return response.json();
     }).then(function(data) {
         console.log(data)
-        var resultHTML = '<a class="result" href="' + data.shortUrl + '">'
-            + data.shortUrl + '</a>';
+        var resultHTML = '<a class="result" href="' + data.shortenUrl + '">'
+            + data.shortenUrl + '</a>';
         $('#link').html(resultHTML);
         $('#link').hide().fadeIn('slow');
     })
