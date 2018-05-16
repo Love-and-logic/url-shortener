@@ -1,6 +1,6 @@
 Hello All!
 
-## Getting Started
+## Custom URL Shortener
 
 A Berkeley City College final project for Erik Holtz and Sarah Van Wart's MMART 162 class.
 The final project is a full stack application of a URL shortener similar to that of bit.ly and goo.gl.
@@ -83,8 +83,6 @@ Currently in process to deploy via Heroku
 * [ExpressJS](http://expressjs.com/) - minimalist web framework  
 
 ## Contributing
-
-
 
 ## Versioning
 
