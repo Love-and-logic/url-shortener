@@ -1,7 +1,22 @@
 // add an event listener to the shorten button for when the user clicks it
 
+// const getURL =()=>{
+//   fetch('https://localhost:3000/api/shorten',{
+//     method: 'GET',
+//     body: JSON.stringify({
+//       url: $('#url-field').val(),
+//       shortUrl: $('#short-field').val()
+//     }),
+//     headers: {'Content-Type': 'application/json'}
+//   }).then(function(response){
+//     return res.status(201).send(model)
+//   })
+//   next()
+// }
+
+
 const saveURL = () => {
-    fetch('http://localhost:3000/api/shorten', {
+    fetch('http://localhost:3000/urls', {
         method: 'POST',
         body: JSON.stringify({
             url: $('#url-field').val(),
@@ -12,7 +27,7 @@ const saveURL = () => {
         return response.json();
     }).then(function(data) {
         console.log(data)
-        var resultHTML = '<a class="result" href="' + data.shortUrl + '">'
+        var resultHTML = '<a class="result" href="http://localhost:3000/' + data.shortUrl + '">'
             + data.shortUrl + '</a>';
         $('#link').html(resultHTML);
         $('#link').hide().fadeIn('slow');

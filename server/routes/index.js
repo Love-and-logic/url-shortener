@@ -7,8 +7,8 @@ const Url = mongoose.model('Url', models.Url)
 
 module.exports = {
   saveUrl(req, res){
-      var longUrl = req.body.url;
-      var shortUrl = req.body.shortUrl;
+  //  res.status(201).send(req.body)
+
 
       const makeid = () => {
         let text = ''
@@ -17,6 +17,7 @@ module.exports = {
           text += possible.charAt(Math.floor(Math.random() * possible.length));
         return text;
       }
+      //in case this breaks, try console.log(req.body)
       if (req.body.shortUrl.length === 0) {
        //first, generate the code
         req.body.shortUrl = makeid()
@@ -24,21 +25,27 @@ module.exports = {
       const url = new Url(req.body)
       url.save(function (err, model) {
           if (err) {
-              return console.error(err)
+            return console.error(err)
           }
           console.log(model, 'saved!!!')
           res.status(201).send(model)
       })
-  }
+    },
+
+    redirectFromCode(req, res) {
+        // const FindCode = req.params.redirectFromCode
+        console.log(req.body)
+        Url.findOne({ 'shortUrl': req.params.code}, function(err,model){
+          //res.status(200).send(model);
+            res.redirect(model.url)
+        })
+    },
+
+    pingTest(request, response) {
+        return response.status(201).send({
+            'message': 'Cool beans, it worked!'
+        })
+    }
 }
-/*
-      else if (req.body.code.length < 6) {
-      //don't store invalid codes
-      res.status(500).send({
-        message : 'Too short!! Please enter a code that is at least 6 characters',
-      })
-      }
-    res.status(200).send({
-        message : 'Here is your long URL: ${req.body.longUrl}. Here is your short URL: ${req.body.shortUrl}'
-      })
-  }
+
+

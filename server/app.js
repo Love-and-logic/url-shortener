@@ -24,7 +24,10 @@ app.use(errorhandler())
 app.use(cors())
 
 
-app.post('/api/shorten', routes.saveUrl)
-
+app.post('/urls', routes.saveUrl)
+app.get('/', routes.pingTest)
+app.get('/api/', routes.pingTest)
+app.get('/urls', routes.pingTest)
+app.get('/:code', routes.redirectFromCode)
 
 app.listen(3000)

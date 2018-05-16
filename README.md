@@ -1,6 +1,6 @@
 Hello All!
 
-# Custom URL Shortener
+## Getting Started
 
 A Berkeley City College final project for Erik Holtz and Sarah Van Wart's MMART 162 class.
 The final project is a full stack application of a URL shortener similar to that of bit.ly and goo.gl.
@@ -39,6 +39,7 @@ server
 .....package.JSON
 .gitignore
 README.md
+
 
 For QA testing, run locally on a NoSQL database server.
 
