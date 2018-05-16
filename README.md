@@ -34,7 +34,7 @@ server
 ..........index.js                                                                                         
 ...../routes                                                                                           
 ..........index.js                                                                             
-.....app.js
+.....app.js                                                                                                                    
 .....package-lock.JSON                                                                                                                                                                     
 .....package.JSON                                                                                                                                                                          
 .gitignore                                                                                                                                                                                 
