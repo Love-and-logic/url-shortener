@@ -1,28 +1,45 @@
 Hello All!
 
-# Custom URL Shortener
+## Getting Started
 
 A Berkeley City College final project for Erik Holtz and Sarah Van Wart's MMART 162 class.
 The final project is a full stack application of a URL shortener similar to that of bit.ly and goo.gl.
 
 ## Getting Started
 
-The client directory has the index.html and an assets folder with the css and javascript.
-The server folder contains the app.js which is the mechanics of the url shortener.
+The client directory contain the structure of the shortener webpage within the index.html and the css. The client-side javascript is shorten.js, which hooks up the button and displays the resulting short URL to the user. It also formats the data received from the user and funnels it into the server.
 
-The user-entered URLs are stored in: index.js
+The server folder contains the app.js, which is the mechanics of the URL shortener. This file creates the database connection and initializes middleware that processes the request and response objects in between routes. It also makes available all the node modules used in the project, including mongo, mongoose, and express.
+
+The models folder creates a format for the data to be saved as entries in the mongoose database and names the structure to be accessed in the routes folder. The routes grabs the short and long URLs from the client side, creates a new short URL if none is given, and sends back the status (success or failure) of the request to the console.
+
+The user-entered URLs are stored in a mongoose database with two columns, one for the long URL and one for short. They also each have automatically generated ids. The entries are accessed via the short URL.
+
+Package-lock describes the npm tree so the same node node modules used in this project can be installed on other systems identically.
+Package.json gives information to npm that allows it to identify the project and handle the project's dependencies.
+
+Gitignore tells us which files and directories don't need to be uploaded when we commit the project to github.
 
 File structure:
 
-client                                                                                     
+client                                                                                  
 .....index.html                                                                        
 ...../assets                                                                                             
-........../js                                                                                                             
-........../css                                                                                                                 
-server                                                                                           
+........../js
+...............shorten.js                                                                                                             
+........../css   
+...............main.css                                                                                                              
+server    
+...../models                                                                                           
+..........index.js                                                                                         
 ...../routes                                                                                           
 ..........index.js                                                                             
 .....app.js
+.....package-lock.JSON
+.....package.JSON
+.gitignore
+README.md
+
 
 For QA testing, run locally on a NoSQL database server.
 
