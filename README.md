@@ -35,9 +35,9 @@ server
 ...../routes                                                                                           
 ..........index.js                                                                             
 .....app.js
-.....package-lock.JSON
-.....package.JSON
-.gitignore
+.....package-lock.JSON                                                                                                                                                                     
+.....package.JSON                                                                                                                                                                          
+.gitignore                                                                                                                                                                                 
 README.md
 
 For QA testing, run locally on a NoSQL database server.
