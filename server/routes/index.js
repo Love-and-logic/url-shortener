@@ -17,6 +17,7 @@ module.exports = {
           text += possible.charAt(Math.floor(Math.random() * possible.length));
         return text;
       }
+      //in case this breaks, try console.log(req.body)
       if (req.body.shortUrl.length === 0) {
        //first, generate the code
         req.body.shortUrl = makeid()
@@ -24,22 +25,25 @@ module.exports = {
       const url = new Url(req.body)
       url.save(function (err, model) {
           if (err) {
-              return console.error(err)
+            return console.error(err)
           }
           console.log(model, 'saved!!!')
           res.status(201).send(model)
-
       })
     },
 
     redirectFromCode(req, res) {
         // const FindCode = req.params.redirectFromCode
+        console.log(req.body)
         Url.findOne({ 'shortUrl': req.params.code}, function(err,model){
           //res.status(200).send(model);
             res.redirect(model.url)
         })
+    },
 
+    pingTest(request, response) {
+        return response.status(201).send({
+            'message': 'Cool beans, it worked!'
+        })
     }
-
-
 }
