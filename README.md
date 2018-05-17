@@ -22,23 +22,27 @@ Gitignore tells us which files and directories don't need to be uploaded when we
 
 File structure:
 
-client                                                                                  
-.....index.html                                                                        
-...../assets                                                                                             
-........../js
-...............shorten.js                                                                                                             
-........../css   
-...............main.css                                                                                                              
-server    
-...../models                                                                                           
-..........index.js                                                                                         
-...../routes                                                                                           
-..........index.js                                                                             
-.....app.js                                                                                                                    
-.....package-lock.JSON                                                                                                                                                                     
-.....package.JSON                                                                                                                                                                          
-.gitignore                                                                                                                                                                                 
-README.md
+├── book.json
+├── README.md
+├── SUMMARY.md
+├── client/
+|   ├── index.html
+|   └── assets/
+|      └── css/
+|         └── main.css
+|      └── js/
+|      └── .DS-Store
+|      └── shorten.js
+├── server/
+|   ├── app.js
+|   ├── routes/
+|      └── index.js
+|   └── models/
+|      └── index.js    
+├── README.md
+├── .gitignore
+├── package.json
+└── package-lock.json
 
 For QA testing, run locally on a NoSQL database server.
 
