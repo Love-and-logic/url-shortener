@@ -23,25 +23,45 @@ Gitignore tells us which files and directories don't need to be uploaded when we
 File structure:
 
 ├── book.json
+
 ├── README.md
+
 ├── SUMMARY.md
+
 ├── client/
+
 |   ├── index.html
+
 |   └── assets/
+
 |      └── css/
+
 |         └── main.css
+
 |      └── js/
+
 |      └── .DS-Store
+
 |      └── shorten.js
+
 ├── server/
+
 |   ├── app.js
+
 |   ├── routes/
+
 |      └── index.js
+
 |   └── models/
-|      └── index.js    
+
+|      └── index.js
+
 ├── README.md
+
 ├── .gitignore
+
 ├── package.json
+
 └── package-lock.json
 
 For QA testing, run locally on a NoSQL database server.
