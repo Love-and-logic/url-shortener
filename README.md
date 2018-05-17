@@ -30,31 +30,31 @@ File structure:
 
 ├── client/
 
-|   ├── index.html
+|....├── index.html
 
-|   └── assets/
+|....└── assets/
 
-|      └── css/
+|.......└── css/
 
-|         └── main.css
+|...........└── main.css
 
-|      └── js/
+|.......└── js/
 
-|      └── .DS-Store
+|...........└── .DS-Store
 
-|      └── shorten.js
+|...........└── shorten.js
 
 ├── server/
 
-|   ├── app.js
+|....├── app.js
 
-|   ├── routes/
+|....├── routes/
 
-|      └── index.js
+|.......└── index.js
 
-|   └── models/
+|....└── models/
 
-|      └── index.js
+|.......└── index.js
 
 ├── README.md
 
