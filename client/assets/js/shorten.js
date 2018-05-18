@@ -34,6 +34,20 @@ const saveURL = () => {
     })
 };
 
+// const get404Pic=()=>{
+//   fetch('http://localhost:3000/*',{
+//     method: 'GET',
+//     body: JSON.stringify({
+//       page: $('#img').val()
+//     }),
+//     headers: {"Content-Type": "application/json"}
+// }).then(function(data) {
+//     console.log(data)
+//     var picOf404 = '<img src="404_AdhamDannaway.png' + 'Kudos to Adham Dannaway for this 404 page''">'
+//         + '</src>';
+//     $('#img').html(picOf404);
+// }
+
 $('.btn-shorten').on('click', saveURL)
 
 

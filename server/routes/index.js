@@ -32,6 +32,7 @@ module.exports = {
       })
     },
 
+
     redirectFromCode(req, res) {
         // const FindCode = req.params.redirectFromCode
         console.log(req.body)
@@ -47,5 +48,3 @@ module.exports = {
         })
     }
 }
-
-
