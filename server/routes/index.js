@@ -46,6 +46,8 @@ module.exports = {
             'message': 'Cool beans, it worked!'
         })
     }
+
+    // respondWith404(request, response) {
+    //     return response.sendFile('404_AdhamDannaway.png')
+    // }
 }
-
-

@@ -34,6 +34,19 @@ const saveURL = () => {
     })
 };
 
+// Tried using this code to setup 404 error page
+// const page404=(req, res, next) => {
+//     const err = new Error();
+//     err.status = 404;
+//     next();
+// });
+//
+// app.use(function(err, req, res, next){
+//     res.sendStatus(404);
+//     res.render('404');
+//     return;
+// }
+
 $('.btn-shorten').on('click', saveURL)
 
 

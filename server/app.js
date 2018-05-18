@@ -29,5 +29,6 @@ app.get('/', routes.pingTest)
 app.get('/api/', routes.pingTest)
 app.get('/urls', routes.pingTest)
 app.get('/:code', routes.redirectFromCode)
+app.get('/*', routes.page404)
 
 app.listen(3000)
