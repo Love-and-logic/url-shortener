@@ -14,7 +14,7 @@ let app = express()
 // create the database connection
 const DATABASE_NAME = 'my_blog_database'
 // const MONGODB_URI = 'mongodb://<dbuser>:<dbpassword>@ds115712.mlab.com:15712/my_blog_database' + DATABASE_NAME
-const MONGODB_URI = process.env.DATABASE_URI
+const MONGODB_URI = `${process.env.DATABASE_URI}`
 mongoose.connect(MONGODB_URI)
 mongoose.Promise = global.Promise
 const db = mongoose.connection
