@@ -28,7 +28,7 @@ app.use(cors())
 
 
 app.post('/urls', routes.saveUrl)
-app.get('/', routes.pingTest)
+app.get('/', routes.redirectFromCode)
 app.get('/api/', routes.pingTest)
 app.get('/urls', routes.pingTest)
 app.get('/:code', routes.redirectFromCode)
