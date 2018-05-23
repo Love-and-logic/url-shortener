@@ -16,7 +16,7 @@
 
 
 const saveURL = () => {
-    fetch('mongodb://<dbuser>:<dbpassword>@ds115712.mlab.com:15712/my_blog_database', {
+    fetch('https://mmart162-final-project.herokuapp.com/', {
         method: 'POST',
         body: JSON.stringify({
             url: $('#url-field').val(),
@@ -27,7 +27,7 @@ const saveURL = () => {
         return response.json();
     }).then(function(data) {
         console.log(data)
-        var resultHTML = '<a class="result" href="mongodb://<dbuser>:<dbpassword>@ds115712.mlab.com:15712/my_blog_database" + data.shortUrl + ''>'
+        var resultHTML = '<a class="result" href="https://mmart162-final-project.herokuapp.com/" + data.shortUrl + ''>'
             + data.shortUrl + '</a>';
         $('#link').html(resultHTML);
         $('#link').hide().fadeIn('slow');
