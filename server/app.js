@@ -11,7 +11,7 @@ const routes = require('./routes')
 let app = express()
 // create the database connection
 const DATABASE_NAME = 'my_blog_database'
-const MONGODB_URI = 'mongodb://localhost:27017/' + DATABASE_NAME
+const MONGODB_URI = 'mongodb://<dbuser>:<dbpassword>@ds115712.mlab.com:15712/my_blog_database' + DATABASE_NAME
 mongoose.connect(MONGODB_URI)
 mongoose.Promise = global.Promise
 const db = mongoose.connection

@@ -16,7 +16,7 @@
 
 
 const saveURL = () => {
-    fetch('http://localhost:3000/urls', {
+    fetch('mongodb://<dbuser>:<dbpassword>@ds115712.mlab.com:15712/my_blog_database', {
         method: 'POST',
         body: JSON.stringify({
             url: $('#url-field').val(),
@@ -27,7 +27,7 @@ const saveURL = () => {
         return response.json();
     }).then(function(data) {
         console.log(data)
-        var resultHTML = '<a class="result" href="http://localhost:3000/' + data.shortUrl + '">'
+        var resultHTML = '<a class="result" href="mongodb://<dbuser>:<dbpassword>@ds115712.mlab.com:15712/my_blog_database" + data.shortUrl + ''>'
             + data.shortUrl + '</a>';
         $('#link').html(resultHTML);
         $('#link').hide().fadeIn('slow');
