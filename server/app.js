@@ -1,4 +1,4 @@
-require.('dotenv').config()
+require('dotenv').config()
 const express = require('express')
 const errorhandler = require('errorhandler')
 const logger = require('morgan')
