@@ -10,6 +10,7 @@ const routes = require('./routes')
 
 
 
+
 let app = express()
 // create the database connection
 const DATABASE_NAME = 'my_blog_database'
@@ -28,7 +29,7 @@ app.use(cors())
 
 
 app.post('/urls', routes.saveUrl)
-app.get('/', routes.redirectFromCode)
+app.get('/', routes.pingTest)
 app.get('/api/', routes.pingTest)
 app.get('/urls', routes.pingTest)
 app.get('/:code', routes.redirectFromCode)
