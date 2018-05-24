@@ -32,7 +32,8 @@ module.exports = {
       })
     },
 
-    redirectFromCode(req, res) {
+    redirectFromCode(request, response
+    ) {
         // const FindCode = req.params.redirectFromCode
         console.log(req.body)
         Url.findOne({ 'shortUrl': req.params.code}, function(err,model){
