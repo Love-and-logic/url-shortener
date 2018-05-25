@@ -27,10 +27,9 @@ app.use(logger('dev'))
 app.use(errorhandler())
 app.use(cors())
 
-
+app.get('/:code', routes.redirectFromCode)
 app.post('/', routes.saveUrl)
 // app.get('/', routes.redirectFromCode)
-app.get('/:code', routes.redirectFromCode)
 // app.get('/*', routes.page404)
 
 app.listen(process.env.PORT || 3000)
