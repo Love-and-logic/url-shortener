@@ -39,16 +39,17 @@ module.exports = {
         console.log('outputting request')
         // console.log(req)
         console.log(req.params)
-        try{
-              Url.findOne({ 'shortUrl': req.params.code}, function (err,model){
-              //res.status(200).send(model);
+
+        Url.findOne({ 'shortUrl': req.params.code}, function (err,model){
+        //res.status(200).send(model);
+            try{
               console.log(model)
-                res.redirect(model.url)}
-            })
-        } catch(e){
-          console.error('ERROR!')
-          console.error(e)
-        }
+            res.redirect(model.url)}
+          } catch(e){
+            console.error('ERROR!')
+            console.error(e)
+          }
+      })
     },
 
     pingTest(request, response) {
