@@ -7,7 +7,7 @@ const mongodb = require('mongodb')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const routes = require('./routes')
-
+const path= require('path')
 
 
 
@@ -26,6 +26,12 @@ app.use(bodyParser.json())
 app.use(logger('dev'))
 app.use(errorhandler())
 app.use(cors())
+
+app.use(express.static(path.join(__dirname, '../client/')))
+app.get('/', (req, res) => {
+    // route to serve up the homepage (index.html)
+    res.sendFile(path.join(__dirname, '../client/index.html'))
+})
 
 app.get('/:code', routes.redirectFromCode)
 app.post('/', routes.saveUrl)
