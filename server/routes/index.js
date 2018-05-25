@@ -32,12 +32,15 @@ module.exports = {
       })
     },
 
-    redirectFromCode(req, res
-    ) {
+    redirectFromCode(req, res) {
         // const FindCode = req.params.redirectFromCode
         // console.log(req.body)
+        console.log('outputting request')
+        console.log(req)
+        console.log(req.params.code)
         Url.findOne({ 'shortUrl': req.params.code}, (err,model)=>{
           //res.status(200).send(model);
+          console.log(model)
             res.redirect(model.url)
         })
     },
