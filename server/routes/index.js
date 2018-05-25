@@ -39,7 +39,7 @@ module.exports = {
         console.log('outputting request')
         // console.log(req)
         console.log(req.params)
-        Url.findOne({ 'shortUrl': req.params.code}, (err,model)=>{
+        Url.findOne({ 'shortUrl': req.params.code}, function (err,model){
           //res.status(200).send(model);
           console.log(model)
             res.redirect(model.url)
