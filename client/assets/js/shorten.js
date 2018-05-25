@@ -27,7 +27,7 @@ const saveURL = () => {
         return response.json();
     }).then(function(data) {
         console.log(data)
-        var resultHTML = '<a class="result" href="https://mmart162-final-project.herokuapp.com/" + data.shortUrl + ''>'
+        var resultHTML = '<a class="result" href=https://mmart162-final-project.herokuapp.com/ + data.shortUrl + ''>'
             + data.shortUrl + '</a>';
         $('#link').html(resultHTML);
         $('#link').hide().fadeIn('slow');

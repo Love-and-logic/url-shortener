@@ -1,4 +1,4 @@
-require('dotenv').config()
+const dotenv= require('dotenv').config()
 const express = require('express')
 const errorhandler = require('errorhandler')
 const logger = require('morgan')
@@ -29,7 +29,7 @@ app.use(cors())
 
 
 app.post('/urls', routes.saveUrl)
-app.get('/', routes.redirectFromCode)
+// app.get('/', routes.redirectFromCode)
 app.get('/:code', routes.redirectFromCode)
 // app.get('/*', routes.page404)
 
