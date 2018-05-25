@@ -44,7 +44,7 @@ module.exports = {
         //res.status(200).send(model);
             try{
               console.log(model)
-            res.redirect(model.url)}
+            res.redirect(model.url)
           } catch(e){
             console.error('ERROR!')
             console.error(e)
