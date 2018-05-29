@@ -33,17 +33,11 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/index.html'))
 })
 
-app.get('/', (req, res) => {
+app.get('/*', (req, res) => {
     // route to serve up the homepage (index.html)
-    res.sendFile(path.join(__dirname, '../client/index.html'))
+    res.status(404).sendFile(path.join(__dirname, '../client/404.html'))
 })
 
-
-app.get('/*', (req, res) =>{
-  if(res.status(404){
-    res.sendFile.(path.join(__dirname, '../client/404.html'))
-  }
-})
 
 app.get('/:code', routes.redirectFromCode)
 app.post('/', routes.saveUrl)
