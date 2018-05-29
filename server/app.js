@@ -40,7 +40,9 @@ app.get('/', (req, res) => {
 
 
 app.get('/*', (req, res) =>{
-  res.status(404).redirect('../client/404.html')
+  if(res.status(404){
+    res.sendFile.(path.join(__dirname, '../client/404.html'))
+  }
 })
 
 app.get('/:code', routes.redirectFromCode)
