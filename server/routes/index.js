@@ -49,7 +49,6 @@ module.exports = {
             console.error('ERROR!')
             console.error(e)
           }
-          res.status(404).redirect('../client/404.html')
       })
     },
 
