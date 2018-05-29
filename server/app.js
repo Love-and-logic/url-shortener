@@ -35,7 +35,5 @@ app.get('/', (req, res) => {
 
 app.get('/:code', routes.redirectFromCode)
 app.post('/', routes.saveUrl)
-// app.get('/', routes.redirectFromCode)
-// app.get('/*', routes.page404)
 
 app.listen(process.env.PORT || 3000)
