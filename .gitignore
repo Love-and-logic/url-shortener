@@ -1,2 +1,4 @@
 *node_modules*
+*AppData*
+.env
 .DS_Store

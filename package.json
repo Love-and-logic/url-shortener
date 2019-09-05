@@ -1,14 +1,16 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "2.8.4",
+    "dotenv": "^5.0.1",
     "errorhandler": "1.5.0",
     "express": "^4.16.2",
     "mongodb": "^3.0.8",

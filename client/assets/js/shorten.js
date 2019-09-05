@@ -16,7 +16,7 @@
 
 
 const saveURL = () => {
-    fetch('http://localhost:3000/urls', {
+    fetch('https://mmart162-final-project.herokuapp.com/', {
         method: 'POST',
         body: JSON.stringify({
             url: $('#url-field').val(),
@@ -27,12 +27,25 @@ const saveURL = () => {
         return response.json();
     }).then(function(data) {
         console.log(data)
-        var resultHTML = '<a class="result" href="http://localhost:3000/' + data.shortUrl + '">'
+        var resultHTML = '<a class="result" href=https://mmart162-final-project.herokuapp.com/' + data.shortUrl + '>'
             + data.shortUrl + '</a>';
         $('#link').html(resultHTML);
         $('#link').hide().fadeIn('slow');
     })
 };
+
+// Tried using this code to setup 404 error page
+// const page404=(req, res, next) => {
+//     const err = new Error();
+//     err.status = 404;
+//     next();
+// });
+//
+// app.use(function(err, req, res, next){
+//     res.sendStatus(404);
+//     res.render('404');
+//     return;
+// }
 
 $('.btn-shorten').on('click', saveURL)
 

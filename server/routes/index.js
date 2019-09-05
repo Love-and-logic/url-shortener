@@ -34,11 +34,22 @@ module.exports = {
 
     redirectFromCode(req, res) {
         // const FindCode = req.params.redirectFromCode
-        console.log(req.body)
-        Url.findOne({ 'shortUrl': req.params.code}, function(err,model){
-          //res.status(200).send(model);
+        // console.log(req.body)
+        console.log('************************************************')
+        console.log('outputting request')
+        // console.log(req)
+        console.log(req.params)
+
+        Url.findOne({ 'shortUrl': req.params.code}, function (err,model){
+        //res.status(200).send(model);
+            try{
+              console.log(model)
             res.redirect(model.url)
-        })
+          } catch(e){
+            console.error('ERROR!')
+            console.error(e)
+          }
+      })
     },
 
     pingTest(request, response) {
@@ -46,6 +57,8 @@ module.exports = {
             'message': 'Cool beans, it worked!'
         })
     }
+
+    // respondWith404(request, response) {
+    //     return response.sendFile('404_AdhamDannaway.png')
+    // }
 }
-
-
